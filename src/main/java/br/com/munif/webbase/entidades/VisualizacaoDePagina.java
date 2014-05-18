@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.munif.webbase.entidades;
 
 import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
 
 /**
  *
@@ -18,16 +19,62 @@ import javax.persistence.Id;
  */
 @Entity
 public class VisualizacaoDePagina implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
+    @Temporal(javax.persistence.TemporalType.TIMESTAMP)
+    private Date quando;
+
     private String url;
-    
+
     private String ipRemoto;
-    
+
     private String sessao;
+
+    private String usuario;
+
+    private String resultado;
+
+    private String info;
+
+    public VisualizacaoDePagina() {
+        quando = new Date();
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
+    public Date getQuando() {
+        return quando;
+    }
+
+    public void setQuando(Date quando) {
+        this.quando = quando;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getResultado() {
+        return resultado;
+    }
+
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
+    }
 
     public String getUrl() {
         return url;
@@ -52,7 +99,7 @@ public class VisualizacaoDePagina implements Serializable {
     public void setSessao(String sessao) {
         this.sessao = sessao;
     }
-    
+
     public Long getId() {
         return id;
     }
@@ -85,5 +132,5 @@ public class VisualizacaoDePagina implements Serializable {
     public String toString() {
         return "br.com.munif.webbase.entidades.VisualizacaoDePagina[ id=" + id + " ]";
     }
-    
+
 }
