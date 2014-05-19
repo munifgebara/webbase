@@ -3,7 +3,11 @@
   <persistence-unit name="UnidadeDePersistencia" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <class>br.com.munif.webbase.entidades.VisualizacaoDePagina</class>
-    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <class>br.com.munif.webbase.entidades.Arquivo</class>
+    <class>br.com.munif.webbase.entidades.ArquivoParte</class>
+    <class>br.com.munif.webbase.entidades.GrupoUsuario</class>
+    <class>br.com.munif.webbase.entidades.Usuario</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/webbase?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>

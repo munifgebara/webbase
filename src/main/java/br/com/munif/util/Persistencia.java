@@ -16,18 +16,17 @@ public class Persistencia {
 
     
     //Singleton
-    private static Persistencia instancia=new Persistencia();
+    private static final Persistencia instancia=new Persistencia();
 
     public static Persistencia getInstancia() {
         return instancia;
     }
     
-    
-    
     private EntityManagerFactory emf;
 
     private Persistencia() {
         emf = Persistence.createEntityManagerFactory("UnidadeDePersistencia");
+        //PersistenciaUtil.criaUsuarioPadrao();
     }
 
     public EntityManagerFactory getEmf() {

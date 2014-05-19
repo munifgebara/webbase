@@ -6,6 +6,7 @@
 package br.com.munif.webbase.filtros;
 
 import br.com.munif.util.Persistencia;
+import br.com.munif.util.PersistenciaUtil;
 import br.com.munif.webbase.entidades.VisualizacaoDePagina;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -46,7 +47,7 @@ public class TransacoesFiltro implements Filter {
             chain.doFilter(request, response);
             tlem.get().getTransaction().commit();
         } catch (Throwable t) {
-            if (tlem.get().getTransaction().isActive()) {
+            if (tlem.get()!=null&&tlem.get().getTransaction().isActive()) {
                 tlem.get().getTransaction().rollback();
             }
             problem = t;
@@ -124,6 +125,7 @@ public class TransacoesFiltro implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         this.filterConfig = filterConfig;
+        PersistenciaUtil.criaUsuarioPadrao();
     }
 
     private void registraVisualizacao(ServletRequest request, Throwable problem) {
