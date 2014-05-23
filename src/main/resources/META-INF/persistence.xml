@@ -7,6 +7,8 @@
     <class>br.com.munif.webbase.entidades.ArquivoParte</class>
     <class>br.com.munif.webbase.entidades.GrupoUsuario</class>
     <class>br.com.munif.webbase.entidades.Usuario</class>
+    <class>br.com.munif.munif.entidades.Artigo</class>
+    <class>br.com.munif.munif.entidades.Assunto</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/webbase?zeroDateTimeBehavior=convertToNull"/>

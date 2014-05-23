@@ -4,6 +4,7 @@
     Author     : munifgebarajunior
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
@@ -32,252 +33,168 @@
     <body>
 
         <!-- Header -->
-        <div id="header-wrapper">
-            <header id="header" class="container">
+
+        <jsp:include page="header.jsp"/>
+
+        <div id="banner">
+            <div class="container">
                 <div class="row">
-                    <div class="12u">
+                    <div class="6u">
 
-                        <!-- Logo -->
-
-                        <h1><a href="index.html" id="logo"><img src="images/logo.png" alt="logo"/>munif.com.br</a></h1>
-
-                        <!-- Nav -->
-                        <nav id="nav">
-                            <a href="index.html">Home</a>
-                            <a href="threecolumn.html">Notícias</a>
-                            <a href="twocolumn1.html">Professor</a>
-                            <a href="twocolumn2.html">Desenvolvedor</a>
-                            <a href="onecolumn.html">Sobre</a>
-                        </nav>
+                        <!-- Banner Copy -->
+                        <p>Desenvolvedor, professor e pesquisador</p>
+                        <a href="http://github.com/munifgebara" class="button-big">GitHub do Munif</a>
+                        <a href="http://munif.com.br/munifold" class="button-big">Versão Anterior</a>
 
                     </div>
-                </div>
-            </header>
-            <div id="banner">
-                <div class="container">
-                    <div class="row">
-                        <div class="6u">
+                    <div class="6u">
 
-                            <!-- Banner Copy -->
-                            <p>Desenvolvedor, professor e pesquisador</p>
-                            <a href="http://github.com/munifgebara" class="button-big">GitHub do Munif</a>
-                            <a href="http://munif.com.br/munifold" class="button-big">Versão Anterior</a>
+                        <!-- Banner Image -->
+                        <a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
 
-                        </div>
-                        <div class="6u">
-
-                            <!-- Banner Image -->
-                            <a href="#" class="bordered-feature-image"><img src="images/banner.jpg" alt="" /></a>
-
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Features -->
-        <div id="features-wrapper">
-            <div id="features">
-                <div class="container">
-                    Últimos Posts
-                    <div class="row">
-                        <div class="3u">
-
-                            <!-- Feature #1 -->
-                            <section>
-                                <a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
-                                <h2>Welcome to Halcyonic</h2>
-                                <p>
-                                    This is <strong>Halcyonic</strong>, a free site template 
-                                    by <a href="http://n33.co/">AJ</a> for
-                                    <a href="http://html5up.net">HTML5 UP</a>. It's responsive,
-                                    built on HTML5 + CSS3, and includes 5 unique page layouts.
-                                </p>
-                            </section>
-
-                        </div>
-                        <div class="3u">
-
-                            <!-- Feature #2 -->
-                            <section>
-                                <a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
-                                <h2>Responsive You Say?</h2>
-                                <p>
-                                    Yes! Halcyonic is built on the <a href="http://skeljs.org">skelJS</a>
-                                    framework, so it has full responsive support for desktop, tablet,
-                                    and mobile device displays.
-                                </p>
-                            </section>
-
-                        </div>
-                        <div class="3u">
-
-                            <!-- Feature #3 -->
-                            <section>
-                                <a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
-                                <h2>License Info</h2>
-                                <p>
-                                    Halcyonic is licensed under the <a href="http://html5up.net/license">CCA 3.0</a> license,
-                                    so use it for personal or commercial use as much as you like (just keep
-                                    the footer credit intact).
-                                </p>
-                            </section>
-
-                        </div>
-                        <div class="3u">
-
-                            <!-- Feature #4 -->
-                            <section>
-                                <a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
-                                <h2>Volutpat etiam aliquam</h2>
-                                <p>
-                                    Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse 
-                                    eu varius nibh. Suspendisse vitae magna eget odio amet mollis.
-                                </p>
-                            </section>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Content -->
-        <div id="content-wrapper">
-            <div id="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="4u">
-
-                            <!-- Box #1 -->
-                            <section>
-                                <header>
-                                    <h2>Sobre o Munif</h2>
-                                    <h3>Munif Gebara Junior</h3>
-                                </header>
-                                <a href="#" class="feature-image"><img src="images/pic05.jpg" alt="" /></a>
-                                <p>
-                                    Começou a programar em 1983, se formou em Ciência da Computação na UEM em 1997 e concluiu o mestrado em 2001 na UTFPR em Robótica, Informática Industrial. 
-                                    Desenvolve software comercialmente desde 1997 e leciona no ensino superior desde 2001. 
-                                </p>
-                            </section>
-
-                        </div>
-                        <div class="4u">
-
-                            <!-- Box #2 -->
-                            <section>
-                                <header>
-                                    <h2>O que eu faço?</h2>
-                                    <h3>Principais atividades</h3>
-                                </header>
-                                <ul class="check-list">
-                                    <li>Aulas na graução e pós-graduação</li>
-                                    <li>Desenvolvimento de software web, mobile e embarcado</li>
-                                    <li>Pesquisas</li>
-                                    <li>Consultorias</li>
-                                </ul>
-                            </section>
-
-                        </div>
-                        <div class="4u">
-
-                            <!-- Box #3 -->
-                            <section>
-                                <header>
-                                    <h2>Tecnologias</h2>
-                                    <h3>Algumas que gosto e recomendo</h3>
-                                </header>
-                                <ul class="quote-list">
-                                    <li>
-                                        <img src="images/pic06.jpg" alt="" />
-                                        <p>"Write once, run anywhere."</p>
-                                        <span>Linguagem Java</span>
-                                    </li>
-                                    <li>
-                                        <img src="images/pic07.jpg" alt="" />
-                                        <p>"O sistema operacional móvel mais popular do mundo."</p>
-                                        <span>Android</span>
-                                    </li>
-                                    <li>
-                                        <img src="images/pic08.jpg" alt="" />
-                                        <p>"Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use Hardware and Software."</p>
-                                        <span>Arduino</span>
-                                    </li>
-                                </ul>
-                            </section>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div id="footer-wrapper">
-            <footer id="footer" class="container">
+    <!-- Features -->
+    <div id="features-wrapper">
+        <div id="features">
+            <div class="container">
+                Últimos Posts
                 <div class="row">
-                    <div class="8u">
+                    <div class="3u">
 
-                        <!-- Links -->
+
+
+
+
+                        <!-- Feature #1 -->
                         <section>
-                            <h2>Links</h2>
-                            <div>
-                                <div class="row">
-                                    <div class="3u">
-                                        <ul class="link-list last-child">
-                                            <li><a href="http://www.oracle.com/technetwork/java/index.html">Java</a></li>
-                                            <li><a href="http://developer.android.com/index.html">Android</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="3u">
-                                        <ul class="link-list last-child">
-                                            <li><a href="https://netbeans.org/">NetBeans</a></li>
-                                            <li><a href="http://www.arduino.cc">Arduino</a></li>
+                            <a href="#" class="bordered-feature-image"><img src="images/pic01.jpg" alt="" /></a>
+                            <h2>${artigos[0].titulo}(${artigos[0].assunto.nome})</h2>
+                            <p>
+                                ${artigos[0].texto}                                
+                            </p>
+                        </section>
 
-                                        </ul>
-                                    </div>
-                                    <div class="3u">
-                                        <ul class="link-list last-child">
-                                            <li><a href="http://www.codeblocks.org/">CodeBlocks</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="3u">
-                                        <ul class="link-list last-child">
-                                            <li><a href="http://xbmc.org/">XBMC</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+
+                    </div>
+                    <div class="3u">
+
+                        <!-- Feature #2 -->
+                        <section>
+                            <a href="#" class="bordered-feature-image"><img src="images/pic02.jpg" alt="" /></a>
+                            <h2>${artigos[1].titulo}(${artigos[1].assunto.nome})</h2>
+                            <p>
+                                ${artigos[1].texto}
+                            </p>
+                        </section>
+
+                    </div>
+                    <div class="3u">
+
+                        <!-- Feature #3 -->
+                        <section>
+                            <a href="#" class="bordered-feature-image"><img src="images/pic03.jpg" alt="" /></a>
+                            <h2>${artigos[2].titulo}(${artigos[2].assunto.nome})</h2>
+                            <p>
+                                ${artigos[2].texto}
+                            </p>
+                        </section>
+
+                    </div>
+                    <div class="3u">
+
+                        <!-- Feature #4 -->
+                        <section>
+                            <a href="#" class="bordered-feature-image"><img src="images/pic04.jpg" alt="" /></a>
+                            <h2>${artigos[3].titulo}(${artigos[3].assunto.nome})</h2>
+                            <p>
+                                ${artigos[3].texto}
+                            </p>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div id="content-wrapper">
+        <div id="content">
+            <div class="container">
+                <div class="row">
+                    <div class="4u">
+
+                        <!-- Box #1 -->
+                        <section>
+                            <header>
+                                <h2>Sobre o Munif</h2>
+                                <h3>Munif Gebara Junior</h3>
+                            </header>
+                            <a href="#" class="feature-image"><img src="images/pic05.jpg" alt="" /></a>
+                            <p>
+                                Começou a programar em 1983, se formou em Ciência da Computação na UEM em 1997 e concluiu o mestrado em 2001 na UTFPR em Robótica, Informática Industrial. 
+                                Desenvolve software comercialmente desde 1997 e leciona no ensino superior desde 2001. 
+                            </p>
                         </section>
 
                     </div>
                     <div class="4u">
 
-                        <!-- Blurb -->
+                        <!-- Box #2 -->
                         <section>
-                            <h2>munif.com.br</h2>
-                            <p>
-                                (44) | 84034939(Tim) | 91594939(Vivo) | 30262876(Gvt)
-                            </p>
-                            <p>
-                               R.Marcelino Champagnat, 520 Zona 2 
-                               Maringá-PR 87010-430
-                            </p>
+                            <header>
+                                <h2>O que eu faço?</h2>
+                                <h3>Principais atividades</h3>
+                            </header>
+                            <ul class="check-list">
+                                <li>Aulas na graução e pós-graduação</li>
+                                <li>Desenvolvimento de software web, mobile e embarcado</li>
+                                <li>Pesquisas</li>
+                                <li>Consultorias</li>
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div class="4u">
+
+                        <!-- Box #3 -->
+                        <section>
+                            <header>
+                                <h2>Tecnologias</h2>
+                                <h3>Algumas que gosto e recomendo</h3>
+                            </header>
+                            <ul class="quote-list">
+                                <li>
+                                    <img src="images/pic06.jpg" alt="" />
+                                    <p>"Write once, run anywhere."</p>
+                                    <span>Linguagem Java</span>
+                                </li>
+                                <li>
+                                    <img src="images/pic07.jpg" alt="" />
+                                    <p>"The world's most popular mobile OS."</p>
+                                    <span>Android</span>
+                                </li>
+                                <li>
+                                    <img src="images/pic08.jpg" alt="" />
+                                    <p>"Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use Hardware and Software."</p>
+                                    <span>Arduino</span>
+                                </li>
+                            </ul>
                         </section>
 
                     </div>
                 </div>
-            </footer>
+            </div>
         </div>
+    </div>
+    
+    <jsp:include page="footer.jsp"/>
 
-        <!-- Copyright -->
-        <div id="copyright">
-            Design gratuíto: <a href="http://html5up.net">HTML5 UP</a> 
-            | eMail: <a href="mailto:munifgebara@gmail.com">gmail</a> <a href="mailto:munif@munif.com.br">munif</a>
-            | Social: <a href="https://www.facebook.com/munifgebara">facebook</a> | Brasil
 
-        </div>
-
-    </body>
+</body>
 </html>
